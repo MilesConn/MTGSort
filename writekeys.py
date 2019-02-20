@@ -117,7 +117,7 @@ def main():
     db = read_csv()
     card_keys,set_name_lookup = getSetData()
     db=fill_in_data(db,set_name_lookup,card_keys)
-    db.to_csv("/Users/jamesfinal/Desktop/newcsv.csv")
+    db.to_csv("name_of_csv.csv")
     
     
     
