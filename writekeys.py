@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 import time
 
-def getSetData(extra=False):
+def get_set_data(extra=False):
     #This is a method for getting the keys the keys in
     #pass in an arg to write the keys to Documents
     sets_json=get_json('https://api.scryfall.com/sets')
@@ -115,7 +115,7 @@ def json_search(name,data_set):
         raise ValueError
 def main():
     db = read_csv()
-    card_keys,set_name_lookup = getSetData()
+    card_keys,set_name_lookup = get_set_data()
     db=fill_in_data(db,set_name_lookup,card_keys)
     db.to_csv("name_of_csv.csv")
     
@@ -123,5 +123,4 @@ def main():
     
 if __name__=='__main__':
     main()
-
     
